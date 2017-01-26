@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1356</width>
+    <height>768</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QGroupBox {
+    border: 1px solid #CCCCCC;
+    border-radius: 9px;
+    margin-top: 8px;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 10px;
+    padding: 0 3px 0 3px;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <property name="spacing">
+     <number>6</number>
+    </property>
+    <property name="leftMargin">
+     <number>6</number>
+    </property>
+    <property name="topMargin">
+     <number>6</number>
+    </property>
+    <property name="rightMargin">
+     <number>6</number>
+    </property>
+    <property name="bottomMargin">
+     <number>6</number>
+    </property>
+    <item>
+     <widget class="QGroupBox" name="mainGB">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>230</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QGroupBox {
+    margin-top: 0px;
+}</string>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <widget class="QGroupBox" name="renderGB">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>20</y>
+         <width>191</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Render</string>
+       </property>
+       <widget class="QCheckBox" name="controlNet">
+        <property name="geometry">
+         <rect>
+          <x>16</x>
+          <y>20</y>
+          <width>151</width>
+          <height>24</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Control net</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QGroupBox" name="groupBox">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>84</y>
+         <width>191</width>
+         <height>69</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Preset</string>
+       </property>
+       <widget class="QComboBox" name="netPresets">
+        <property name="geometry">
+         <rect>
+          <x>12</x>
+          <y>28</y>
+          <width>151</width>
+          <height>26</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <widget class="MainView" name="mainView"/>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>MainView</class>
+   <extends>QOpenGLWidget</extends>
+   <header>mainview.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>controlNet</tabstop>
+  <tabstop>netPresets</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
