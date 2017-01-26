@@ -41,7 +41,7 @@ void MainView::createBuffers() {
     glGenBuffers(1, &netCoordsBO);
     glBindBuffer(GL_ARRAY_BUFFER, netCoordsBO); //BO1, It can be defined before VAO1
 
-    glEnableVertexAttribArray(0); // Binds the currently bound VAO1 with currently bound BO1 irrespective to their own binding sequence!
+    glEnableVertexAttribArray(0); 
     glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 0, 0);
 }
 
